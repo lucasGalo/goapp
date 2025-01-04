@@ -8,4 +8,4 @@ namespace: goapp
 images:
 - name: goapp
   newName: lucasgalo/goapp
-  newTag: 0f6cc5949edbad26b992640f80cbda8ae8a65664
+  newTag: f17c494407b52f803110b9a6a15150d6b87fd444
