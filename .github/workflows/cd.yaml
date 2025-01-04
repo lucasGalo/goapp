@@ -14,6 +14,6 @@ jobs:
         uses: docker/build-push-action@v1.1.0
         with:
           username: galo_pc@outlook.com
-          password: ${{ screts.DOCKER_PASSWORD }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
           repository: lucasgalo/goapp
           tags: ${{ github.sha }}, latest
