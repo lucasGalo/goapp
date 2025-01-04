@@ -3,6 +3,8 @@ kind: Service
 metadata:
   name: goapp
 spec:
+  syncPolicy:
+    automated: {}
   selector:
     app: goapp
   ports:
