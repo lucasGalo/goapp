@@ -1,0 +1,17 @@
+name: CD
+on:
+  push:
+    branches: [main]
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+## push image for to DockerHub
+      - name: build image and push to docker hub
+        uses: docker/build-push-action@v1.1.0
+        with:
+          username: galo_pc@outlook.com
+          password: ${{ screts.DOCKER_PASSWORD }}
