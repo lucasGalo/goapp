@@ -3,6 +3,8 @@ kind: Deployment
 metadata:
   name: goapp
 spec:
+  syncPolicy:
+    automated: {}
   selector:
     matchLabels:
       app: goapp
