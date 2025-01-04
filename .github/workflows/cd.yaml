@@ -27,14 +27,14 @@ jobs:
         uses: actions/checkout@v2
 
       - name: kustomize
-        uses: imranismail/setup-kustmize@v1
+        uses: imranismail/setup-kustomize@v1
         with:
           kustomize_version: v3.6.1
       
       - name: update k8s
         run: |
           cd k8s
-          kustomize edit set image goapp=lucasGalo/goapp:${{ github.sha }}
+          kustomize edit set image goapp=lucasgalo/goapp:${{ github.sha }}
           cat kustomization.yaml
 
       - name: commit
