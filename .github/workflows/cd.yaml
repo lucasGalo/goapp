@@ -15,3 +15,5 @@ jobs:
         with:
           username: galo_pc@outlook.com
           password: ${{ screts.DOCKER_PASSWORD }}
+          repository: lucasgalo/goapp
+          tags: ${{ github.sha }}, latest
