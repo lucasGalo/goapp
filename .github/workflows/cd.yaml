@@ -17,7 +17,7 @@ jobs:
           username: galo_pc@outlook.com
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: lucasgalo/goapp
-          tags: ${{ github.ref_name }}, latest
+          tags: ${{ steps.tag.outputs.tag }}, latest
 ## Job for Deployment new image
   deploy:
     name: Deploy
@@ -35,7 +35,7 @@ jobs:
       - name: update k8s
         run: |
           cd k8s
-          kustomize edit set image goapp=lucasgalo/goapp:${{ github.ref_name }}
+          kustomize edit set image goapp=lucasgalo/goapp:${{ steps.tag.outputs.tag }}
           cat kustomization.yaml
 
       - name: commit
