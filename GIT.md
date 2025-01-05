@@ -36,3 +36,4 @@ $ git push origin --tags
 
 1. always remember to do a pull
 2. remove v
+3. permission write
