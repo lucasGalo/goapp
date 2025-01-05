@@ -35,3 +35,4 @@ $ git push origin --tags
 ### Notes
 
 1. always remember to do a pull
+2. remove v
