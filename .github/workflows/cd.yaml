@@ -5,7 +5,7 @@ on:
       - '*'
 jobs:
   build:
-    name: Build
+    name: Build_Push
     runs-on: ubuntu-latest
     steps:
       - name: checkout
