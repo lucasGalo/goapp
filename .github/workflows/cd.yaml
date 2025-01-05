@@ -17,7 +17,7 @@ jobs:
           username: galo_pc@outlook.com
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: lucasgalo/goapp
-          tags: ${{ github.sha }}, latest
+          tags: ${{ github.ref_name }}, latest
 ## Job for Deployment new image
   deploy:
     name: Deploy
