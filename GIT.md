@@ -31,7 +31,9 @@ $ git push origin v1.5
 ```bash
 $ git push origin --tags
 ```
-
+```bash
+$ $ git push && git push origin --tags
+```
 ### Notes
 
 1. always remember to do a pull
